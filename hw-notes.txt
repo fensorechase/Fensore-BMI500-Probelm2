@@ -1,0 +1,43 @@
+This file lists my notes attempting to find PDE equation solvers... I didn't end up using any of them.
+
+# TODO: model PDEs, solve with equation solver?
+# (34) simplified set of linear eqns from (27). Also (35) is compact version of (34) if needed...
+# From section VI: "techniques for estimating and fitting these parameters on real data is later detailed in Section VI."
+"""
+[Parameter fitting methods]: section VI
+Method 1: constrained-weighted-LS:
+- error func: (52)
+- model params: θ(t) ** to be estimated
+- (53) 
+θˆ = argmin trE[e(t)We(t)T]
+        θ
+- SOLUTION: ". This problem is in the form
+of nonlinear CWLS for which a variety of stable numerical
+solvers exist. Refer to [31] for a survey of methods and [32,
+Ch. 5] for methods specific to dynamic systems."
+
+Method 2: Extended Kalman Filter
+- See Appendix B for steps
+- "An implementation of the EKF for epidemic model parameter
+and state vector tracking will be provided online in the Git
+repository of the project" -- link: ____
+"""
+# NOTE: Set initial conditions where needed. Also, use identity matrix if needed. 
+
+"""
+PACKAGES: 
+1. Paper reviwing opt methods: https://bmcsystbiol.biomedcentral.com/articles/10.1186/s12918-015-0219-2
+- SMS
+- AMS, 
+- eSS2a, eSS2b
+
+
+*** NOTE: cannot have external dependencies, so don't use 1. below.
+1.) Multi-start solver (python): https://pyomo.readthedocs.io/en/stable/contributed_packages/multistart.html 
+- Unconstraied optimization (quick-start): https://pythonhosted.org/pymeigo/quickstart.html#unconstrained-function
+
+
+2.) Enhanced scatter-search (python wrapper for R): 
+- https://pythonhosted.org/pymeigo/
+- Pypi: https://pypi.org/project/pymeigo/
+"""
